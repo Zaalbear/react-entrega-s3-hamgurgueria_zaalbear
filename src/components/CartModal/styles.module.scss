@@ -10,7 +10,7 @@
     position: fixed;
     inset: 0;
 
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(158, 119, 119, 0.3);
 
     .modal__header{
         width: 85%;
@@ -38,9 +38,9 @@
             right: 5px;
         }
 
-
-
-
+        @media (min-width: 1024px){
+            width: 480px;
+        }
     }
 
     .cart__container{
@@ -96,6 +96,11 @@
             border: none;
             color: var(--gray-2);
         }
+
+        @media (min-width: 1024px){
+            width: 480px;
+            height: 400px;
+        }
     }
 
     .modal__footer{
@@ -131,6 +136,10 @@
                 background-color: var(--color-primary);
             }
 
+        }
+
+        @media (min-width: 1024px){
+            width: 480px;
         }
     }
 }

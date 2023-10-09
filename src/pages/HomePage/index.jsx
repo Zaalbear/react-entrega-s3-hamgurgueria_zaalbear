@@ -11,39 +11,49 @@ export const HomePage = () => {
    const [isVisible, setVisible] = useState(false)
    const [productList, setProductList] = useState([]);
    const [cartList, setCartList] = useState([]);
+   
+   useEffect(() => {
+      localStorage.setItem("@cartlist", JSON.stringify(cartList))
+    }, [cartList])
 
    useEffect(() => {
-
       const getProducts = async () => {
          try {
             const response = await productsApi.get("products")
-      
-           console.log(response)
+            setProductList(response.data)
          
          } catch (error) {
-         console.log(error);
+         alert("Algum erro ocorreu, por favor tente mais tarde...")
       }
    }
    getProducts()
-     
    }, [])
 
-
-
+   const addItem = ({ img, name, price }) => {
+     setCartList([...cartList, {id: crypto.randomUUID(), img: img, name: name, price: price}])
+   }
    
-   // useEffect montagem - carrega os produtos da API e joga em productList
-   // useEffect atualização - salva os produtos no localStorage (carregar no estado)
-   // adição, exclusão, e exclusão geral do carrinho
-   // renderizações condições e o estado para exibir ou não o carrinho
-   // filtro de busca
-   // estilizar tudo com sass de forma responsiva
+   const removeItem = (deletingID) => {
+      const filteredCart = cartList.filter((item) => {
+         if (item.id !== deletingID) {
+            return item;
+         }
+      });
+      
+      setCartList(filteredCart);
+   };
+   
+   const clearCart = () => {
+      setCartList([])
+      console.log(cartList)
+    }
 
    return (
       <>
          <Header setVisible={setVisible} cartList={cartList} />
          <main>
-            <ProductList productList={productList} />
-            {isVisible ? <CartModal setVisible={setVisible} cartList={cartList} /> : null}
+            <ProductList addItem={addItem} productList={productList} />
+            {isVisible ? <CartModal setVisible={setVisible} clearCart={clearCart} removeItem={removeItem} cartList={cartList} /> : null}
          </main>
       </>
    );
