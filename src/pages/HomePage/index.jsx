@@ -1,3 +1,5 @@
+import "../../styles/index.scss"
+
 import { useState } from "react";
 import { CartModal } from "../../components/CartModal";
 import { Header } from "../../components/Header";
