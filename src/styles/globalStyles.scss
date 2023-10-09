@@ -1,20 +1,21 @@
 :root {
     //colors
-    --color-primary: #27AE60
-    --color-secondary: #EB5757
+    --color-primary: #27AE60;
+    --color-secondary: #EB5757;
 
-    --gray-0: #F5F5F5
-    --gray-1: #E0E0E0
-    --gray-2: #828282
-    --gray-3: #333333
+    --gray-0: #F5F5F5;
+    --gray-1: #E0E0E0;
+    --gray-2: #828282;
+    --gray-3: #333333;
 
     //fonts
     --global-font: 'Inter', sans-serif;
 }
 
-#root, body {
+#root, body, main {
     width: 100%;
 
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
