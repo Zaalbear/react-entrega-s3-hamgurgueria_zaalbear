@@ -8,9 +8,11 @@ import { ProductList } from "../../components/ProductList";
 import { productsApi } from "../../services";
 
 export const HomePage = () => {
+   const localData = JSON.parse(localStorage.getItem("@cartlist"))
+
    const [isVisible, setVisible] = useState(false)
    const [productList, setProductList] = useState([]);
-   const [cartList, setCartList] = useState([]);
+   const [cartList, setCartList] = useState(localData);
    
    useEffect(() => {
       localStorage.setItem("@cartlist", JSON.stringify(cartList))
@@ -29,8 +31,9 @@ export const HomePage = () => {
    getProducts()
    }, [])
 
-   const addItem = ({ img, name, price }) => {
-     setCartList([...cartList, {id: crypto.randomUUID(), img: img, name: name, price: price}])
+   const addItem = ({ id, img, name, price }) => {
+      console.log( cartList.includes(id))
+         setCartList([...cartList, {id: id, img: img, name: name, price: price}])
    }
    
    const removeItem = (deletingID) => {

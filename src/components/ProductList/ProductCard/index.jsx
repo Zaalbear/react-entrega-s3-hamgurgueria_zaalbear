@@ -2,7 +2,7 @@ import styles from "../styles.module.scss"
 
 export const ProductCard = ({ product, addItem }) => {
     return(
-        <li tabindex={product.id} className={styles.list__item}>
+        <li tabIndex={product.id} className={styles.list__item}>
             <img className={styles.item__img} src={product.img} alt={product.name} />
             <div className={styles.info__container}>
                 <h3 className={`${styles.item__name} heading3`}>{product.name}</h3>
