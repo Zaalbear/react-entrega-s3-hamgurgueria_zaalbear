@@ -1,33 +1,37 @@
-.heading1, .heading2, .heading3 {
-    font-size: 1.625rem;
-    font-weight: 700;
-    font-family: 'Inter', sans-serif;
+.heading1,
+.heading2,
+.heading3 {
+  font-size: 1.625rem;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
 
-    &.heading2 {
-        font-size: 1.375rem;
-    }
+  &.heading2 {
+    font-size: 1.375rem;
+  }
 
-    &.heading3 {
-        font-size: 1.125rem;
-    }
+  &.heading3 {
+    font-size: 1.125rem;
+  }
 }
 
-.headline, .text__body, .caption {
-    font-size: 1rem;
-    font-weight: 600;
-    font-family: 'Inter', sans-serif;
+.headline,
+.text__body,
+.caption {
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
 
-    &.text__body {
-        font-size: 0.875rem;
-    }
+  &.text__body {
+    font-size: 0.875rem;
+  }
 
-    &.caption{
-        font-size: 0.75rem;
-    }
+  &.caption {
+    font-size: 0.75rem;
+  }
 }
 
 .text__body-semiBold {
-    font-size: 0.875rem;
-    font-weight: 600;
-    font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
 }

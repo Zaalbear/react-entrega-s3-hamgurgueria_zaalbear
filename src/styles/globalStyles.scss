@@ -1,27 +1,29 @@
 :root {
-    //colors
-    --color-primary: #27AE60;
-    --color-secondary: #EB5757;
+  //colors
+  --color-primary: #27ae60;
+  --color-secondary: #eb5757;
 
-    --gray-0: #F5F5F5;
-    --gray-1: #E0E0E0;
-    --gray-2: #828282;
-    --gray-3: #333333;
+  --gray-0: #f5f5f5;
+  --gray-1: #e0e0e0;
+  --gray-2: #828282;
+  --gray-3: #333333;
 
-    //fonts
-    --global-font: 'Inter', sans-serif;
+  //fonts
+  --global-font: "Inter", sans-serif;
 }
 
-#root, body, main {
-    width: 100%;
+#root,
+body,
+main {
+  width: 100%;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-@media (min-width: 1024px){
-    main {
-        width: 950px;
-    }
+@media (min-width: 1024px) {
+  main {
+    width: 950px;
+  }
 }
