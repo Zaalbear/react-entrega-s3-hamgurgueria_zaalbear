@@ -21,7 +21,7 @@ export const Header = ({ setVisible, cartList }) => {
         <div className={styles.cart__container}>
           <button onClick={openCart} className={styles.cart__bttn}>
             <MdShoppingCart className={styles.cart__icon} size={21} />
-            <span className={styles.cart__count}>{cartList.length}</span>
+            <span className={styles.cart__count}>{cartList ? cartList.length : "0"}</span>
           </button>
         </div>
       </div>

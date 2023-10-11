@@ -12,7 +12,7 @@ export const HomePage = () => {
 
   const [isVisible, setVisible] = useState(false);
   const [productList, setProductList] = useState([]);
-  const [cartList, setCartList] = useState(localData);
+  const [cartList, setCartList] = useState(localData ? localData : []);
 
   useEffect(() => {
     localStorage.setItem("@cartlist", JSON.stringify(cartList));
